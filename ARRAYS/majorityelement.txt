@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int freq=0;int ans;
+        for(int num:nums){
+            int ch=num;
+            if(freq==0){
+                ans=num;
+                freq++;
+            }
+            else if(ans==num){
+                freq++;
+            }
+            else{
+                
+                freq--;
+            }
+        }
+        return ans;
+    }
+};
